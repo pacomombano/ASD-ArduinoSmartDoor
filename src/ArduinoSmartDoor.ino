@@ -154,7 +154,7 @@ void loop(){
   Serial.println(SERVO_STATE);
   delay(1000);
   
-  if(sole<=4){
+  if(sole<=4.80){
     if(SERVO_STATE==0){
       apertura();
   	}if(SERVO_STATE==1){
@@ -163,7 +163,7 @@ void loop(){
       digitalWrite(DOOR_SERVO2_PIN, LOW);
       digitalWrite(LOCK_SERVO1_PIN, LOW);
   	}
-  }if(sole>4){
+  }if(sole>4.80){
     if(SERVO_STATE==1){
       chiusura();
     }if(SERVO_STATE==0){
